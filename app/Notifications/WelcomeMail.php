@@ -48,6 +48,7 @@ class WelcomeMail extends Notification
                         opportunities. We empower investors to earn unlimitedly using our investment packages.</p>
                         <p>We’d love to hear what you think of ".env('APP_NAME')." and if there is anything
                         we can improve. If you have any questions, do not hesitate to contact us.<br>")
+                    ->action('Login to Account', route('login'))
                     ->line('Thank you for using our application!');
     }
 

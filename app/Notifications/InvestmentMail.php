@@ -48,6 +48,7 @@ class InvestmentMail extends Notification
             ->subject($this->subject)
             ->greeting('Hello '.$this->user->name)
             ->line($this->message)
+            ->action('Login to Account',route('login'))
             ->line('Thank you for using our application!');
     }
 
