@@ -1,81 +1,155 @@
 @extends('home.base')
 @section('content')
-
-    <!-- banner-style-two -->
-    <section class="banner-style-two p_relative centred">
+    <!-- banner-section -->
+    <section class="banner-section p_relative">
         <div class="banner-carousel owl-theme owl-carousel owl-dots-none">
             <div class="slide-item p_relative">
-                <div class="image-layer p_absolute" style="background-image:url({{ asset('home/images/banner/banner-6.jpg') }})"></div>
-                <div class="auto-container">
-                    <div class="content-box">
-                        <span>Smart Financial Solutions</span>
-                        <h2>Secure Your Future with Strategic Investments</h2>
-                        <p>We help you make informed decisions to grow, protect, and diversify your capital across dynamic markets.</p>
-                        <div class="btn-box">
-                            <a href="{{ route('register') }}" class="theme-btn-one">Create an Account</a>
-                        </div>
-                    </div>
+                <div class="image-layer p_absolute" style="background-image:url({{ asset('home/images/banner/banner-1.jpg') }})"></div>
+                <div class="starshine">
+                    <div class="shine shine-1"></div>
+                    <div class="shine shine-2"></div>
                 </div>
-            </div>
-
-            <div class="slide-item p_relative">
-                <div class="image-layer p_absolute" style="background-image:url({{ asset('home/images/banner/banner-7.jpg') }})"></div>
                 <div class="auto-container">
                     <div class="content-box">
-                        <span>Long-Term Wealth Planning</span>
-                        <h2>Invest Today, Build a Stronger Tomorrow</h2>
-                        <p>From oil and mining to real estate, {{ $siteName }} connects you to high-value opportunities with expert guidance.</p>
-                        <div class="btn-box">
+                        <div class="content-inner">
+                            <span>Invest in the Future</span>
+                            <h2>Secure Wealth Through Crypto & Assets</h2>
+                            <p>Partner with us to navigate the evolving world of digital currencies and asset-backed investments.</p>
                             <a href="{{ route('register') }}" class="theme-btn-one">Join Now!</a>
+                            <a href="{{ route('login') }}" class="theme-btn-two">Login</a>
                         </div>
                     </div>
                 </div>
             </div>
-
+            <div class="slide-item p_relative">
+                <div class="image-layer p_absolute" style="background-image:url({{ asset('home/images/banner/banner-2.jpg') }})"></div>
+                <div class="starshine">
+                    <div class="shine shine-1"></div>
+                    <div class="shine shine-2"></div>
+                </div>
+                <div class="auto-container">
+                    <div class="content-box">
+                        <div class="content-inner">
+                            <span>Global Opportunities</span>
+                            <h2>Diversify Across Stocks & Commodities</h2>
+                            <p>Expand your portfolio with high-yield stocks, oil and gas ventures, and rare metals like gold.</p>
+                            <a href="{{ route('register') }}" class="theme-btn-one">Join Now!</a>
+                            <a href="{{ route('login') }}" class="theme-btn-two">Login</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-item p_relative">
+                <div class="image-layer p_absolute" style="background-image:url({{ asset('home/images/banner/banner-3.jpg') }})"></div>
+                <div class="starshine">
+                    <div class="shine shine-1"></div>
+                    <div class="shine shine-2"></div>
+                </div>
+                <div class="auto-container">
+                    <div class="content-box">
+                        <div class="content-inner">
+                            <span>Smart Investments</span>
+                            <h2>Professional Asset Management</h2>
+                            <p>Let our team of experts manage your portfolio with strategic insight and real-world experience.</p>
+                            <a href="{{ route('register') }}" class="theme-btn-one">Join Now!</a>
+                            <a href="{{ route('login') }}" class="theme-btn-two">Login</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-item p_relative">
+                <div class="image-layer p_absolute" style="background-image:url({{ asset('home/images/banner/banner-4.jpg') }})"></div>
+                <div class="starshine">
+                    <div class="shine shine-1"></div>
+                    <div class="shine shine-2"></div>
+                </div>
+                <div class="auto-container">
+                    <div class="content-box">
+                        <div class="content-inner">
+                            <span>Energy & Innovation</span>
+                            <h2>Explore Oil, Gas & Renewable Ventures</h2>
+                            <p>Capitalize on high-demand sectors with our carefully vetted energy investment options.</p>
+                            <a href="{{ route('register') }}" class="theme-btn-one">Join Now!</a>
+                            <a href="{{ route('login') }}" class="theme-btn-two">Login</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-item p_relative">
+                <div class="image-layer p_absolute" style="background-image:url({{ asset('home/images/banner/banner-5.jpg') }})"></div>
+                <div class="starshine">
+                    <div class="shine shine-1"></div>
+                    <div class="shine shine-2"></div>
+                </div>
+                <div class="auto-container">
+                    <div class="content-box">
+                        <div class="content-inner">
+                            <span>Trust & Transparency</span>
+                            <h2>Your Gateway to Long-Term Wealth</h2>
+                            <p>Join a community of investors building generational wealth through safe, strategic ventures.</p>
+                            <a href="{{ route('register') }}" class="theme-btn-one">Join Now!</a>
+                            <a href="{{ route('login') }}" class="theme-btn-two">Login</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
-    <!-- banner-style-two end -->
+    <!-- banner-section end -->
 
-
-    <!-- feature-style-two -->
-    <section class="feature-style-two bg-color-2 pt_150 pb_150">
+    <!-- feature-section -->
+    <section class="feature-section bg-color-1 sec-pad centred">
         <div class="pattern-layer">
-            <div class="pattern-1" style="background-image: url({{ asset('home/images/shape/shape-22.png') }});"></div>
-            <div class="pattern-2" style="background-image: url({{ asset('home/images/shape/shape-23.png') }});"></div>
+            <div class="pattern-1" style="background-image: url({{asset('home/images/shape/shape-2.png')}});"></div>
+            <div class="pattern-2" style="background-image: url({{asset('home/images/shape/shape-3.png')}});"></div>
         </div>
         <div class="auto-container">
+            <div class="sec-title mb_50">
+                <span class="sub-title">Feature</span>
+                <h2>Professional And Dedicated <br />Consulting Solutions.</h2>
+            </div>
             <div class="row clearfix">
-                <div class="col-lg-4 col-md-6 col-sm-12 title-column">
-                    <div class="sec-title light pr_100">
-                        <span class="sub-title">Features</span>
-                        <h2>Professional and Reliable Investment Advisory Services</h2>
-                    </div>
-                </div>
-
                 <div class="col-lg-4 col-md-6 col-sm-12 feature-block">
-                    <div class="feature-block-two mt_50 wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500ms">
+                    <div class="feature-block-one wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500ms">
                         <div class="inner-box">
-                            <div class="icon-box"><i class="icon-7"></i></div>
-                            <h3>Portfolio Planning</h3>
-                            <p>We help you build and manage a portfolio that aligns with your goals, risk profile, and financial vision.</p>
+                            <figure class="image-box"><img src="{{asset('home/images/resource/feature-1.jpg')}}" alt=""></figure>
+                            <div class="lower-content">
+                                <div class="icon-box"><i class="icon-7"></i></div>
+                                <h3><a href="#">Wealth Advisory</a></h3>
+                                <p>Receive personalized financial advice tailored to your goals in crypto, gold, and global markets.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-
                 <div class="col-lg-4 col-md-6 col-sm-12 feature-block">
-                    <div class="feature-block-two mt_50 wow fadeInUp animated" data-wow-delay="300ms" data-wow-duration="1500ms">
+                    <div class="feature-block-one wow fadeInUp animated" data-wow-delay="300ms" data-wow-duration="1500ms">
                         <div class="inner-box">
-                            <div class="icon-box"><i class="icon-9"></i></div>
-                            <h3>Investment Insights</h3>
-                            <p>Access expert-backed research and financial intelligence to make better decisions in high-potential sectors.</p>
+                            <figure class="image-box"><img src="{{asset('home/images/resource/feature-2.jpg')}}" alt=""></figure>
+                            <div class="lower-content">
+                                <div class="icon-box"><i class="icon-8"></i></div>
+                                <h3><a href="#">Asset Diversification</a></h3>
+                                <p>Spread risk and maximize potential by investing across oil, mining, real estate, and digital assets.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 feature-block">
+                    <div class="feature-block-one wow fadeInUp animated" data-wow-delay="600ms" data-wow-duration="1500ms">
+                        <div class="inner-box">
+                            <figure class="image-box"><img src="{{asset('home/images/resource/feature-3.jpg')}}" alt=""></figure>
+                            <div class="lower-content">
+                                <div class="icon-box"><i class="icon-9"></i></div>
+                                <h3><a href="#">Risk Management</a></h3>
+                                <p>Minimize losses and protect your capital through our structured, expert-led risk frameworks.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
-    <!-- feature-style-two -->
+    <!-- feature-section -->
+
 
 
     <!-- about-style-two -->
@@ -125,12 +199,64 @@
     <!-- about-style-two end -->
 
 
+    <!-- pricing-section -->
+    <section class="pricing-section">
+        <div class="auto-container">
+            <div class="sec-title centred mb_50">
+                <span class="sub-title">Investment Options</span>
+                <h2> Choose the Plan<br /> that works for you</h2>
+            </div>
+            <div class="tabs-box">
+
+                <div class="tabs-content">
+                    <div class="tab active-tab" id="tab-1">
+                        <div class="row clearfix">
+                            @foreach($packages as $package)
+                                @inject('option','App\Defaults\Custom')
+                                <div class="col-lg-4 col-md-6 col-sm-12 pricing-block mt-4">
+                                    <div class="pricing-block-one">
+                                        <div class="pricing-table">
+                                            <div class="shape-1" style="background-image: url({{ asset('home/images/shape/shape-38.png') }}s);"></div>
+                                            <div class="table-header mb_35">
+                                                <span class="title">{{$package->name}}</span>
+                                                <h2>{{$package->roi}}%/<span>{{$option->getReturnType($package->returnType)}}</span></h2>
+                                            </div>
+                                            <div class="table-content">
+                                                <ul class="feature-list list-style-one clearfix">
+                                                    <li>
+                                                        Price: ${{number_format($package->minAmount,2)}} - @if($package->isUnlimited !=1)
+                                                            ${{number_format($package->maxAmount,2)}}
+                                                        @else
+                                                            Unlimited
+                                                        @endif
+                                                    </li>
+                                                    <li>Profit return: {{$package->roi}}% {{$option->getReturnType($package->returnType)}}</li>
+                                                    <li>Contract Duration: {{$package->Duration}}</li>
+                                                    <li>Referral Bonus: {{$package->referral}}% </li>
+                                                </ul>
+                                            </div>
+                                            <div class="table-footer">
+                                                <a href="{{ route('register') }}" class="theme-btn-one">Get Started Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endforeach
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
     <!-- service-section -->
     <section class="service-section p_relative centred sec-pad">
         <div class="auto-container">
             <div class="sec-title mb_70">
                 <span class="sub-title">What We Do</span>
-                <h2>Expert Investment & Financial Advisory Services</h2>
+                <h2>Innovative Wealth Building & Asset Diversification</h2>
             </div>
             <div class="row clearfix">
 
@@ -140,13 +266,13 @@
                             <div class="static-content">
                                 <div class="shape" style="background-image: url({{ asset('home/images/shape/shape-4.png') }});"></div>
                                 <div class="icon-box"><i class="icon-7"></i></div>
-                                <h3><a href="#">Strategy & Planning</a></h3>
-                                <p>We design strategic financial roadmaps tailored to your goals, risk appetite, and growth timeline.</p>
+                                <h3><a href="#">Crypto Portfolio Structuring</a></h3>
+                                <p>From Bitcoin to emerging altcoins, we help you build a strong, diversified crypto portfolio.</p>
                             </div>
                             <div class="overlay-content">
                                 <div class="shape" style="background-image: url({{ asset('home/images/shape/shape-5.png') }});"></div>
-                                <h3><a href="#">Strategy & Planning</a></h3>
-                                <p>We design strategic financial roadmaps tailored to your goals, risk appetite, and growth timeline.</p>
+                                <h3><a href="#">Crypto Portfolio Structuring</a></h3>
+                                <p>From Bitcoin to emerging altcoins, we help you build a strong, diversified crypto portfolio.</p>
                             </div>
                         </div>
                     </div>
@@ -157,12 +283,12 @@
                         <div class="inner-box">
                             <div class="static-content">
                                 <div class="icon-box"><i class="icon-12"></i></div>
-                                <h3><a href="#">Wealth Program Management</a></h3>
-                                <p>Comprehensive oversight of your assets with regular performance reviews and growth optimization.</p>
+                                <h3><a href="#">Precious Metals & Mining</a></h3>
+                                <p>Explore wealth preservation through strategic investments in gold mining and rare assets.</p>
                             </div>
                             <div class="overlay-content">
-                                <h3><a href="#">Wealth Program Management</a></h3>
-                                <p>Comprehensive oversight of your assets with regular performance reviews and growth optimization.</p>
+                                <h3><a href="#">Precious Metals & Mining</a></h3>
+                                <p>Explore wealth preservation through strategic investments in gold mining and rare assets.</p>
                             </div>
                         </div>
                     </div>
@@ -174,13 +300,13 @@
                             <div class="static-content">
                                 <div class="shape" style="background-image: url({{ asset('home/images/shape/shape-6.png') }});"></div>
                                 <div class="icon-box"><i class="icon-8"></i></div>
-                                <h3><a href="#">Tax Management</a></h3>
-                                <p>Minimize your tax liabilities and ensure compliance with personalized tax-saving strategies.</p>
+                                <h3><a href="#">Oil & Gas Ventures</a></h3>
+                                <p>Gain access to exclusive upstream and downstream oil and gas investment opportunities.</p>
                             </div>
                             <div class="overlay-content">
                                 <div class="shape" style="background-image: url({{ asset('home/images/shape/shape-7.png') }});"></div>
-                                <h3><a href="#">Tax Management</a></h3>
-                                <p>Minimize your tax liabilities and ensure compliance with personalized tax-saving strategies.</p>
+                                <h3><a href="#">Oil & Gas Ventures</a></h3>
+                                <p>Gain access to exclusive upstream and downstream oil and gas investment opportunities.</p>
                             </div>
                         </div>
                     </div>
@@ -192,13 +318,13 @@
                             <div class="static-content">
                                 <div class="shape" style="background-image: url({{ asset('home/images/shape/shape-8.png') }});"></div>
                                 <div class="icon-box"><i class="icon-13"></i></div>
-                                <h3><a href="#">Investment Policy Design</a></h3>
-                                <p>We craft disciplined, risk-aware investment policies to guide long-term capital growth.</p>
+                                <h3><a href="#">Global Equity Access</a></h3>
+                                <p>Tap into emerging and mature markets with our curated global stock and ETF strategies.</p>
                             </div>
                             <div class="overlay-content">
                                 <div class="shape" style="background-image: url({{ asset('home/images/shape/shape-9.png') }});"></div>
-                                <h3><a href="#">Investment Policy Design</a></h3>
-                                <p>We craft disciplined, risk-aware investment policies to guide long-term capital growth.</p>
+                                <h3><a href="#">Global Equity Access</a></h3>
+                                <p>Tap into emerging and mature markets with our curated global stock and ETF strategies.</p>
                             </div>
                         </div>
                     </div>
@@ -209,12 +335,12 @@
                         <div class="inner-box">
                             <div class="static-content">
                                 <div class="icon-box"><i class="icon-14"></i></div>
-                                <h3><a href="#">Financial Advisory</a></h3>
-                                <p>Our advisors provide clear, unbiased financial guidance to help you make informed decisions.</p>
+                                <h3><a href="#">Alternative Asset Advisory</a></h3>
+                                <p>From startups to private equity, we help you explore alternative assets for exponential growth.</p>
                             </div>
                             <div class="overlay-content">
-                                <h3><a href="#">Financial Advisory</a></h3>
-                                <p>Our advisors provide clear, unbiased financial guidance to help you make informed decisions.</p>
+                                <h3><a href="#">Alternative Asset Advisory</a></h3>
+                                <p>From startups to private equity, we help you explore alternative assets for exponential growth.</p>
                             </div>
                         </div>
                     </div>
@@ -226,13 +352,13 @@
                             <div class="static-content">
                                 <div class="shape" style="background-image: url({{ asset('home/images/shape/shape-10.png') }});"></div>
                                 <div class="icon-box"><i class="icon-15"></i></div>
-                                <h3><a href="#">Insurance Strategy</a></h3>
-                                <p>Protect your income, assets, and future with smart insurance planning and coverage options.</p>
+                                <h3><a href="#">Long-Term Wealth Planning</a></h3>
+                                <p>Secure your financial legacy with intergenerational planning and trust-based asset protection.</p>
                             </div>
                             <div class="overlay-content">
                                 <div class="shape" style="background-image: url({{ asset('home/images/shape/shape-11.png') }});"></div>
-                                <h3><a href="#">Insurance Strategy</a></h3>
-                                <p>Protect your income, assets, and future with smart insurance planning and coverage options.</p>
+                                <h3><a href="#">Long-Term Wealth Planning</a></h3>
+                                <p>Secure your financial legacy with intergenerational planning and trust-based asset protection.</p>
                             </div>
                         </div>
                     </div>
@@ -242,6 +368,7 @@
         </div>
     </section>
     <!-- service-section end -->
+
 
 
 
@@ -508,7 +635,7 @@
 
     <!-- project-style-two -->
     <section class="project-style-two">
-        <div class="bg-layer" style="background-image: url({{ asset('home/images/background/project-bg.jpg') }});"></div>
+        <div class="bg-layer" style="background-image: url({{ asset('home/images/background/video-bg.jpg') }});"></div>
         <div class="outer-container">
             <div class="project-carousel owl-carousel owl-theme owl-dots-none owl-nav-none">
 

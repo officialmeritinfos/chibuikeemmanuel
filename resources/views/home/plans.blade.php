@@ -130,42 +130,56 @@
         </section>
         <!-- page-title end -->
 
-    <div class="pricing-area" style="margin-bottom: 5rem;margin-top: 5rem;">
-        <div class="container">
-            <div class="row justify-content-center">
-                @foreach($packages as $package)
-                    @inject('option','App\Defaults\Custom')
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                        <div class="single-price">
-                            <div class="deal-top">
-                                <h3>{{$package->name}}</h3>
-                                <h4> {{$package->roi}}%/ <span class="sup">{{$option->getReturnType($package->returnType)}}</span> </h4>
-                                <small class="text-white">{{$package->note}}</small>
-                            </div>
-                            <div class="deal-bottom">
-                                <ul class="deal-item">
-                                    <li>
-                                        Price: ${{number_format($package->minAmount,2)}} - @if($package->isUnlimited !=1)
-                                            ${{number_format($package->maxAmount,2)}}
-                                        @else
-                                            Unlimited
-                                        @endif
-                                    </li>
-                                    <li>Profit return: {{$package->roi}}% {{$option->getReturnType($package->returnType)}}</li>
-                                    <li>Contract Duration: {{$package->Duration}}</li>
-                                    <li>Referral Bonus: {{$package->referral}}% </li>
-                                </ul>
-                                <div class="btn-area">
-                                    <a href="{{route('register')}}">Get Started</a>
+    <!-- pricing-section -->
+    <section class="pricing-section sec-pad">
+        <div class="auto-container">
+            <div class="sec-title centred mb_50">
+                <span class="sub-title">Investment Options</span>
+                <h2> Choose the Plan<br /> that works for you</h2>
+            </div>
+            <div class="tabs-box">
+
+                <div class="tabs-content">
+                    <div class="tab active-tab" id="tab-1">
+                        <div class="row clearfix">
+                            @foreach($packages as $package)
+                                @inject('option','App\Defaults\Custom')
+                                <div class="col-lg-4 col-md-6 col-sm-12 pricing-block mt-4">
+                                    <div class="pricing-block-one">
+                                        <div class="pricing-table">
+                                            <div class="shape-1" style="background-image: url({{ asset('home/images/shape/shape-38.png') }}s);"></div>
+                                            <div class="table-header mb_35">
+                                                <span class="title">{{$package->name}}</span>
+                                                <h2>{{$package->roi}}%/<span>{{$option->getReturnType($package->returnType)}}</span></h2>
+                                            </div>
+                                            <div class="table-content">
+                                                <ul class="feature-list list-style-one clearfix">
+                                                    <li>
+                                                        Price: ${{number_format($package->minAmount,2)}} - @if($package->isUnlimited !=1)
+                                                            ${{number_format($package->maxAmount,2)}}
+                                                        @else
+                                                            Unlimited
+                                                        @endif
+                                                    </li>
+                                                    <li>Profit return: {{$package->roi}}% {{$option->getReturnType($package->returnType)}}</li>
+                                                    <li>Contract Duration: {{$package->Duration}}</li>
+                                                    <li>Referral Bonus: {{$package->referral}}% </li>
+                                                </ul>
+                                            </div>
+                                            <div class="table-footer">
+                                                <a href="{{ route('register') }}" class="theme-btn-one">Get Started Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
+                            @endforeach
+
                         </div>
                     </div>
-                @endforeach
-
+                </div>
             </div>
         </div>
-    </div>
+    </section>
 
 
 @endsection

@@ -45,6 +45,70 @@
     <link href="{{ asset('home/css/elements-css/news.css') }}" rel="stylesheet">
     <link href="{{ asset('home/css/elements-css/subscribe.css') }}" rel="stylesheet">
     <link href="{{ asset('home/css/responsive.css') }}" rel="stylesheet">
+    <link href="{{ asset('home/css/elements-css/pricing.css') }}" rel="stylesheet">
+<style>
+    /* Fullscreen Frosted Preloader */
+    #preloader {
+        position: fixed;
+        inset: 0;
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        transition: opacity 0.6s ease, visibility 0.6s;
+    }
+
+    #preloader.fade-out {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    /* Centered Inner Box */
+    .preloader-inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    /* Glowing Spinner */
+    .spinner {
+        width: 64px;
+        height: 64px;
+        border: 6px solid transparent;
+        border-top: 6px solid #00ffc6;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        box-shadow: 0 0 15px #00ffc6aa;
+    }
+
+    /* Optional branding text or logo */
+    .brand-text {
+        font-family: 'Poppins', sans-serif;
+        font-size: 1rem;
+        color: #ffffffdd;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        animation: fadein 1.5s ease-in-out infinite alternate;
+    }
+
+    /* Spinner Animation */
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+
+    /* Text fade-in pulse */
+    @keyframes fadein {
+        0% { opacity: 0.5; transform: translateY(2px); }
+        100% { opacity: 1; transform: translateY(-2px); }
+    }
+
+
+</style>
 
 </head>
 
@@ -56,28 +120,21 @@
 <div class="boxed_wrapper">
 
 
-    <!-- preloader -->
-    <div class="loader-wrap">
-        <div class="preloader">
-            <div class="preloader-close">x</div>
-            <div id="handle-preloader" class="handle-preloader">
-                <div class="animation-preloader">
-                    <div class="spinner"></div>
-                    <div class="txt-loading">
-                        @foreach(str_split($siteName) as $char)
-                            <span data-text-preloader="{{ $char }}" class="letters-loading">{{ $char }}</span>
-                        @endforeach
-                    </div>
 
-                </div>
-            </div>
+    <div id="preloader">
+        <div class="preloader-inner">
+            <div class="spinner"></div>
+            <div class="brand-text">Loading Wealth...</div>
         </div>
     </div>
+
+
+
     <!-- preloader end -->
 
 
     <!-- main header -->
-    <header class="main-header header-style-two">
+    <header class="main-header">
         <!-- header-top -->
         <div class="header-top">
             <div class="auto-container">
@@ -212,7 +269,7 @@
 
 
     <!-- main-footer -->
-    <footer class="main-footer alternat-2">
+    <footer class="main-footer">
         <div class="widget-section">
             <div class="pattern-layer">
                 <div class="pattern-1" style="background-image: url({{ asset('home/images/shape/shape-27.png') }});"></div>
@@ -265,6 +322,7 @@
                                 <h3>Contact</h3>
                             </div>
                             <div class="widget-content">
+                                <p>Contact us today.</p>
                                 <ul class="info-list clearfix">
                                     <li><i class="icon-23"></i>{{ $web->address }}</li>
                                     <li><i class="icon-3"></i><a href="mailto:{{ $web->email }}">{{ $web->email }}</a></li>
@@ -274,7 +332,6 @@
                                 </ul>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -430,17 +487,6 @@
 <!-- end popup massage -->
 @stack('js')
 
-<!-- Smartsupp Live Chat script -->
-<script type="text/javascript">
-    var _smartsupp = _smartsupp || {};
-    _smartsupp.key = 'a503d93baa2c47c2da767be927586e83f760188b';
-    window.smartsupp||(function(d) {
-        var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
-        s=d.getElementsByTagName('script')[0];c=d.createElement('script');
-        c.type='text/javascript';c.charset='utf-8';c.async=true;
-        c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
-    })(document);
-</script>
-<noscript> Powered by <a href=“https://www.smartsupp.com” target=“_blank”>Smartsupp</a></noscript>
+
 </body><!-- End of .page_wrapper -->
 </html>
