@@ -224,14 +224,16 @@
                                             <div class="table-content">
                                                 <ul class="feature-list list-style-one clearfix">
                                                     <li>
-                                                        Price: ${{number_format($package->minAmount,2)}} - @if($package->isUnlimited !=1)
+                                                        Investment Range: ${{number_format($package->minAmount,2)}} - @if($package->isUnlimited !=1)
                                                             ${{number_format($package->maxAmount,2)}}
                                                         @else
                                                             Unlimited
                                                         @endif
                                                     </li>
-                                                    <li>Profit return: {{$package->roi}}% {{$option->getReturnType($package->returnType)}}</li>
-                                                    <li>Contract Duration: {{$package->Duration}}</li>
+                                                    <li> Rate of Return: {{$package->roi}}% {{$option->getReturnType($package->returnType)}}</li>
+                                                    <li> ROI: {{$package->roi*$package->numberOfReturns}}% </li>
+                                                    <li> Duration: {{$package->Duration}}</li>
+                                                    <li> Reinvestment Cycle: {{$package->Reinvestment}} times</li>
                                                     <li>Referral Bonus: {{$package->referral}}% </li>
                                                 </ul>
                                             </div>
